@@ -3,7 +3,7 @@ config = File.foreach('config.txt').map { |line| line.split(' ').join(' ') }
 token = config[0].to_s
 bot = Discordrb::Commands::CommandBot.new token: "#{token}", client_id: "#{config[1].to_s}", prefix: "#{config[2].to_s}"
 
-bot.message(content: '!ping') do |event|
+bot.command :ping do |event|
     m = event.respond('Pong!')
     m.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
   end
