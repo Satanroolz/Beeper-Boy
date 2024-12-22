@@ -26,8 +26,7 @@ bot.command(:random, min_args: 0, max_args: 2, description: 'Generates a random 
 bot.command :moose do |event|
   doc = Nokogiri::HTML(URI.open('https://moose.gg/servers').read)
   players = doc.css('p')[17]
-
-  event.respond("There are currently #{players.text} players online")
+  event.respond("There are currently #{players.text} players online.")
 end
 
 bot.run
