@@ -6,11 +6,11 @@ require 'open-uri'
 
 config = File.foreach('../config.txt').map { |line| line.split(' ').join(' ') }
 creds = {
-  :token => config[0].to_s,
-  :client_id => config[1].to_s,
-  :prefix => config[2].to_s
+  token: config[0].to_s,
+  client_id: config[1].to_s,
+  prefix: config[2].to_s
 }
-bot = Discordrb::Commands::CommandBot.new token: "#{creds[:token]}", client_id: "#{creds[:client_id]}", prefix: "#{creds[:prefix]}"
+bot = Discordrb::Commands::CommandBot.new token: "#{creds.fetch(:token)}", client_id: "#{creds.fetch(:client_id)}", prefix: "#{creds.fetch(:prefix)}"
 
 bot.command :ping do |event|
   m = event.respond('Pong!')
