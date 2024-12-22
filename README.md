@@ -12,8 +12,8 @@ This is Beeper Boy! He's a Discord bot that fetches real-time player information
 ### Prerequisites
 
 - Ruby 3.2.2
-- asdf
 - A Discord bot token
+- asdf (Suggested)
 - Docker (Optional)
 
 ### Automated Installation
