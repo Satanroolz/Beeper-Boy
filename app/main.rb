@@ -4,7 +4,7 @@ require 'discordrb'
 require 'nokogiri'
 require 'open-uri'
 
-config = File.foreach('config.txt').map { |line| line.split(' ').join(' ') }
+config = File.foreach('../config.txt').map { |line| line.split(' ').join(' ') }
 creds = {
   :token => config[0].to_s,
   :client_id => config[1].to_s,
