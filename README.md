@@ -16,7 +16,20 @@ This is Beeper Boy! He's a Discord bot that fetches real-time player information
 - A Discord bot token
 - Docker (Optional)
 
-### Installation
+### Automated Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Satanroolz/Beeper-Boy
+   cd Beeper-Boy
+
+2. **Run install script**:
+   ```bash
+   bash install.sh
+
+3. **Bot will start once you've provided your info**
+
+### Manual Installation
 
 1. **Clone the repository**:
    ```bash
@@ -33,12 +46,12 @@ This is Beeper Boy! He's a Discord bot that fetches real-time player information
     DISCORD_BOT_TOKEN
     CLIENT_ID
     MESSAGE_PREFIX
-
 ### Running the Bot
 
 1.	**Start the bot**:
     ```bash
-    ruby ./app/main.rb
+    cd ./app
+    ruby main.rb
 
 2.	**Use the !moose command in your Discord server to get the current playercount for Rusty Moose Main.**
       ![image](https://github.com/user-attachments/assets/7838cac0-7add-4224-880d-190e27532729)
