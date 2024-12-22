@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 require 'discordrb'
+require 'nokogiri'
+require 'open-uri'
+
 config = File.foreach('config.txt').map { |line| line.split(' ').join(' ') }
 token = config[0].to_s
 bot = Discordrb::Commands::CommandBot.new token: "#{token}", client_id: "#{config[1].to_s}", prefix: "#{config[2].to_s}"
@@ -17,5 +22,12 @@ bot.command(:random, min_args: 0, max_args: 2, description: 'Generates a random 
       rand
     end
   end
+
+bot.command :moose do |event|
+  doc = Nokogiri::HTML(URI.open('https://moose.gg/servers').read)
+  players = doc.css('p')[17]
+
+  event.respond("There are currently #{ players.text } players online")
+end
 
 bot.run
