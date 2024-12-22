@@ -28,7 +28,7 @@ This is Beeper Boy! He's a Discord bot that fetches real-time player information
    bundle install
 
 3. **Set up environment variables**:\
-   Rename the example config.txt file in the project directory and add your Discord bot information:
+   Rename the example file to `config.txt` in the project directory and add your Discord bot information:
     ```plaintext
     DISCORD_BOT_TOKEN
     CLIENT_ID
@@ -41,3 +41,4 @@ This is Beeper Boy! He's a Discord bot that fetches real-time player information
     ruby ./app/main.rb
 
 2.	**Use the !moose command in your Discord server to get the current playercount for Rusty Moose Main.**
+      ![image](https://github.com/user-attachments/assets/7838cac0-7add-4224-880d-190e27532729)
