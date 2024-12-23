@@ -33,4 +33,10 @@ bot.command :moose do |event|
   event.respond("There are currently #{players.text} players online.")
 end
 
+bot.command :monday do |event|
+  doc = Nokogiri::HTML(URI.open('https://moose.gg/servers').read)
+  players = doc.css('p')[33]
+  event.respond("There are currently #{players.text} players online.")
+end
+
 bot.run
